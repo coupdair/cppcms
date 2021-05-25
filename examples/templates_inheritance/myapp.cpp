@@ -9,8 +9,7 @@
 
 class myapp  : public cppcms::application {
 public:
-    myapp(cppcms::service &s) :
-       cppcms::application(s)
+    myapp(cppcms::service &s): cppcms::application(s)
     {
         dispatcher().assign("",&myapp::intro,this);
         mapper().assign("");
@@ -22,17 +21,17 @@ public:
         mapper().assign("page","/page");
 
         mapper().root("/myapp");
-    }
+    }//constructor
     void ini(content::master &c)
     {
         c.title = "My Web Site";
-    }
+    }//ini
     void intro()
     {
         content::master c;
         ini(c);
         render("intro",c);
-    }
+    }//intro
     void page()
     {
         content::page c;
@@ -40,7 +39,7 @@ public:
         c.page_title = "About";
         c.page_content = "<p>A page about this web site</p>";
         render("page",c);
-    }
+    }//page
     void news()
     {
         content::news c;
@@ -49,8 +48,8 @@ public:
         c.news_list.push_back("This is the next message.");
         c.news_list.push_back("This is the last message!");
         render("news",c);
-    }
-};
+    }//news
+};//myapp
 
 
 
@@ -64,6 +63,6 @@ int main(int argc,char ** argv)
     catch(std::exception const &e) {
         std::cerr<<e.what()<<std::endl;
     }
-}
+}//main
 // vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4
 

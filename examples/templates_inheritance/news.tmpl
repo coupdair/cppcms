@@ -2,13 +2,14 @@
 <% view news uses content::news extends master %>
 <% template title() %><% include master::title() %> :: News<% end %>
 <% template page_content() %>
-<% foreach message in news_list %>
+  <% foreach message in news_list %>
     <ul>
     <% item %>
-        <li><%= message %></li>
+      <li><%= message %></li>
     <% end %>
     </ul>
-<% end foreach %>
+  <% end foreach %>
 <% end template %> 
 <% end view %>
 <% end skin %>
+
