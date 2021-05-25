@@ -33,7 +33,8 @@ struct info_form : public cppcms::form {
         marital.add("Married","married");
         marital.add("Divorced","divorced");
         name.non_empty();
-        age.range(0,120);
+        sex.non_empty();
+        age.range(0,123);
     }//constructor
     virtual bool validate()
     {

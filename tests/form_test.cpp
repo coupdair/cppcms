@@ -21,7 +21,7 @@ class unit_test : public cppcms::application {
 public:
 	unit_test(cppcms::service &s) : cppcms::application(s)
 	{
-	}
+	}//constructor
 	void load(cppcms::form &f)
 	{
 		if(request().request_method()=="POST" || !request().query_string().empty()) {
@@ -36,7 +36,7 @@ public:
 				out << "invalid\n";
 			}
 		}
-	}
+	}//load
 	virtual void main(std::string a_case)
 	{
 		cppcms::widgets::text text;
@@ -158,7 +158,7 @@ public:
 				if(submit.set())
 					out << "Submit pressed: " << submit.value() << std::endl;
 
-			} 
+			}//POST
 			else if(a_case !="/sub") {
 				std::ostream &out = response().out();
 				out << "non loaded<br>\n";
@@ -173,7 +173,7 @@ public:
 			}
 
 
-		}
+		}// /non_empty
 		else if(a_case == "/text") {
 			X.add(text);
 			text.limits(2,5);
@@ -262,11 +262,8 @@ public:
 			X.add(file);
 			load(X);
 		}
-	}
-};
-
-
-
+	}//main
+};//unit_test
 
 
 int main(int argc,char **argv)
@@ -282,4 +279,4 @@ int main(int argc,char **argv)
 		return EXIT_FAILURE;
 	}
 	return run_ok ? EXIT_SUCCESS : EXIT_FAILURE;
-}
+}//main
