@@ -11,7 +11,7 @@ public:
     hello(cppcms::service &s) :
         cppcms::application(s) 
     {
-    }
+    }//constructor
 
     void main(std::string /*unused*/)
     {
@@ -24,11 +24,11 @@ public:
             	c.state=c.info.marital.selected_id();
             	c.age=c.info.age.value();
             	c.info.clear();
-            }
-        }
+            }//valid
+        }//POST
         render("message",c);
-    }
-};
+    }//main
+};//hello
 
 int main(int argc,char ** argv)
 {
@@ -40,7 +40,6 @@ int main(int argc,char ** argv)
     catch(std::exception const &e) {
         cerr<<e.what()<<endl;
     }
-}
-
-
+}//main
 // vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4
+
