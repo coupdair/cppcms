@@ -18,7 +18,7 @@ void my_hello_world::main(std::string /*url*/)
     response().out()<<
         "<html>\n"
         "<body>\n"
-        "  <h1>Hello World</h1>\n"
+        "  <h1>Hello world (from examples)</h1>\n"
         "</body>\n"
         "</html>\n";
 }
@@ -35,3 +35,4 @@ int main(int argc,char ** argv)
     }
 }
 // vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4
+
