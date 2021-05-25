@@ -16,10 +16,11 @@ public:
     virtual void main(std::string /*url*/)
     {
         content::message c;
-        c.text=">>>Hello<<<";
+        c.text=">>> Hello <<<";
+        c.paragraph="text\nfor paragraph";
         render("message",c);
     }
-};
+};//my_hello_world
 
 
 
@@ -33,6 +34,6 @@ int main(int argc,char ** argv)
     catch(std::exception const &e) {
         std::cerr<<e.what()<<std::endl;
     }
-}
+}//main
 // vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4
 

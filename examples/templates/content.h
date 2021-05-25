@@ -7,9 +7,11 @@
 namespace content  {
     struct message : public cppcms::base_content {
         std::string text;
+        std::string paragraph;
     };
 }
 
 
 #endif
 // vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4
+
