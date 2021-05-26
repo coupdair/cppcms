@@ -33,8 +33,9 @@ struct info_form : public cppcms::form {
         marital.add("Married","married");
         marital.add("Divorced","divorced");
         name.non_empty();
-        age.range(0,120);
-    }
+        sex.non_empty();
+        age.range(0,123);
+    }//constructor
     virtual bool validate()
     {
         if(!form::validate()) 
@@ -44,17 +45,17 @@ struct info_form : public cppcms::form {
             return false;
         }
         return true;
-    }
-};
+    }//validate
+};//info_form
 
 struct message : public cppcms::base_content {
     std::string name,state,sex;
     double age;
     info_form info;
-};
+};//message
 
 } // content
 
-
 #endif
 // vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4
+
