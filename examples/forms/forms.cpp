@@ -6,9 +6,9 @@
 #include "content.h"
 
 using namespace std;
-class hello: public cppcms::application {
+class forms: public cppcms::application {
 public:
-    hello(cppcms::service &s) :
+    forms(cppcms::service &s) :
         cppcms::application(s) 
     {
     }//constructor
@@ -28,13 +28,13 @@ public:
         }//POST
         render("message",c);
     }//main
-};//hello
+};//forms
 
 int main(int argc,char ** argv)
 {
     try {
         cppcms::service app(argc,argv);
-        app.applications_pool().mount(cppcms::applications_factory<hello>());
+        app.applications_pool().mount(cppcms::applications_factory<forms>());
         app.run();
     }
     catch(std::exception const &e) {
