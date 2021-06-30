@@ -13,3 +13,19 @@ if [ "$r" == "forms" ]
 then
   LD_LIBRARY_PATH="/home/pi/SC/CppCMS/cppcms/build;/home/pi/SC/CppCMS/cppcms/build/booster" /home/pi/SC/CppCMS/cppcms/build/forms -c /home/pi/SC/CppCMS/cppcms/examples/forms/config_fastcgi.js
 fi
+
+if [ "$r" == "inheritemplate" ]
+then
+  LD_LIBRARY_PATH="/home/pi/SC/CppCMS/cppcms/build;/home/pi/SC/CppCMS/cppcms/build/booster" /home/pi/SC/CppCMS/cppcms/build/myapp -c /home/pi/SC/CppCMS/cppcms/examples/templates_inheritance/config_fastcgi.js
+fi
+
+if [ "$r" == "web" ]
+then
+  LD_LIBRARY_PATH="/home/pi/SC/CppCMS/cppcms/build;/home/pi/SC/CppCMS/cppcms/build/booster;/home/pi/SC/libI2C/" /home/pi/SC/CppI2C/fake-web --config=/home/pi/SC/CppI2C/config_fastcgi.js
+fi
+
+if [ "$r" == "local" ]
+then
+  LD_LIBRARY_PATH="/home/pi/SC/CppCMS/cppcms/build;/home/pi/SC/CppCMS/cppcms/build/booster;/home/pi/SC/libI2C/" /home/pi/SC/CppI2C/fake-web --config=/home/pi/SC/CppI2C/config.js
+fi
+
