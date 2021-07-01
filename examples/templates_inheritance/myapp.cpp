@@ -36,7 +36,8 @@ public:
     {
         content::page c;
         ini(c);
-        c.page_title = "About";
+        std::cout<<__FILE__<<"/"<<__func__<<std::endl;
+        c.page_title = "About cout";
         c.page_content = "<p>A page about this web site</p>";
         render("page",c);
     }//page
