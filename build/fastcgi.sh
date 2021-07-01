@@ -21,11 +21,11 @@ fi
 
 if [ "$r" == "web" ]
 then
-  LD_LIBRARY_PATH="/home/pi/SC/CppCMS/cppcms/build;/home/pi/SC/CppCMS/cppcms/build/booster;/home/pi/SC/libI2C/" /home/pi/SC/CppI2C/fake-web --config=/home/pi/SC/CppI2C/config_fastcgi.js
+  LD_LIBRARY_PATH="/home/pi/SC/CppCMS/cppcms/build;/home/pi/SC/CppCMS/cppcms/build/booster;/home/pi/SC/libI2C/" /home/pi/SC/CppI2C/i2cweb --config=/home/pi/SC/CppI2C/config_fastcgi.js
 fi
 
 if [ "$r" == "local" ]
 then
-  LD_LIBRARY_PATH="/home/pi/SC/CppCMS/cppcms/build;/home/pi/SC/CppCMS/cppcms/build/booster;/home/pi/SC/libI2C/" /home/pi/SC/CppI2C/fake-web --config=/home/pi/SC/CppI2C/config.js
+  LD_LIBRARY_PATH="/home/pi/SC/CppCMS/cppcms/build;/home/pi/SC/CppCMS/cppcms/build/booster;/home/pi/SC/libI2C/" /home/pi/SC/CppI2C/i2cweb --config=/home/pi/SC/CppI2C/config.js
 fi
 
