@@ -20,6 +20,9 @@ public:
         dispatcher().assign("/page",&myapp::page,this);
         mapper().assign("page","/page");
 
+        dispatcher().assign("/integer",&myapp::integerLink,this);
+        mapper().assign("integer","/integer");
+
         dispatcher().assign("^/integer/(\\d+)$",&myapp::integer,this,1);
         mapper().assign("integer","/integer");
 
@@ -44,14 +47,23 @@ public:
         c.page_content = "<p>A page about this web site</p>";
         render("page",c);
     }//page
+    void integerLink()
+    {
+        content::page c;
+        ini(c);
+        std::cout<<__FILE__<<"/"<<__func__<<std::endl;
+        c.page_title = "integer link ex.";
+        c.page_content = "<p><a href='integer/12'>12</a></p><br/><p><a href='integer/123'>123</a></p>";
+        render("page",c);
+    }//integerLink
     void integer(std::string i)
     {
         content::integer c;
         ini(c);
         std::cout<<__FILE__<<"/"<<__func__<<std::endl;
         c.page_title = "integer";
-        c.i=i;
-        c.page_content = "<p>content</p>";
+        c.i="<p>dynamic integer: "+i+"</p>";
+        c.page_content = "<p>static content</p>";
         render("integer",c);
     }//integer
     void news()
