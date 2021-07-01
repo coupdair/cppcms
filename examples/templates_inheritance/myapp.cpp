@@ -24,7 +24,7 @@ public:
     }//constructor
     void ini(content::master &c)
     {
-        c.title = "My Web Site";
+        c.title = "Web inherit.";
     }//ini
     void intro()
     {
