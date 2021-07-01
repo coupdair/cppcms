@@ -20,7 +20,7 @@ public:
         dispatcher().assign("/page",&myapp::page,this);
         mapper().assign("page","/page");
 
-        dispatcher().assign("/integer",&myapp::integer,this);
+        dispatcher().assign("^/integer/(\\d+)$",&myapp::integer,this,1);
         mapper().assign("integer","/integer");
 
         mapper().root("/myapp");
@@ -44,15 +44,13 @@ public:
         c.page_content = "<p>A page about this web site</p>";
         render("page",c);
     }//page
-    void integer()
+    void integer(std::string i)
     {
-const int id=123;
         content::integer c;
         ini(c);
         std::cout<<__FILE__<<"/"<<__func__<<std::endl;
         c.page_title = "integer";
-        std::ostringstream tmp;tmp<<id;//int>>string
-        c.i=tmp.str();
+        c.i=i;
         c.page_content = "<p>content</p>";
         render("integer",c);
     }//integer

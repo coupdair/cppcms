@@ -26,5 +26,5 @@ sudo service lighttpd start
 ~~~
 
 ~~~ { .bash }
-firefox http://193.48.111.153/myapp http://193.48.111.153/myapp/news http://193.48.111.153/myapp/page
+firefox http://193.48.111.153/myapp http://193.48.111.153/myapp/news http://193.48.111.153/myapp/page http://192.168.1.34/myapp/integer/12 http://192.168.1.34/myapp/integer/123
 ~~~
