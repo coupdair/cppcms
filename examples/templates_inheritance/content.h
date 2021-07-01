@@ -12,7 +12,7 @@ namespace content  {
         std::string page_title, page_content;
     };
     struct integer : public page {
-        int i;
+        std::string i;
     };
     struct news : public master {
         std::list<std::string> news_list;

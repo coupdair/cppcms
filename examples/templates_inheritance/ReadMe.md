@@ -2,7 +2,7 @@
 #compile
 
 ~~~ { .bash }
-../../bin/cppcms_tmpl_cc master.tmpl page.tmpl news.tmpl intro.tmpl -o my_skin.cpp
+../../bin/cppcms_tmpl_cc master.tmpl page.tmpl integer.tmpl news.tmpl intro.tmpl -o my_skin.cpp
 g++ -Wall -I../.. -I../../booster -I../../build -I../../build/booster myapp.cpp my_skin.cpp -o myapp -L../../build -L../../build/booster -lcppcms -lbooster 
 ~~~
 

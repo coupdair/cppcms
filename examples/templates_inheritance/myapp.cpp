@@ -51,9 +51,9 @@ const int id=12;
         ini(c);
         std::cout<<__FILE__<<"/"<<__func__<<std::endl;
         c.page_title = "integer";
-        c.i=id;
+        c.i="12";
         c.page_content = "<p>content</p>";
-        render("page",c);
+        render("integer",c);
     }//integer
     void news()
     {
