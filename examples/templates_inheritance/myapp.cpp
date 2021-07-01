@@ -46,12 +46,13 @@ public:
     }//page
     void integer()
     {
-const int id=12;
+const int id=123;
         content::integer c;
         ini(c);
         std::cout<<__FILE__<<"/"<<__func__<<std::endl;
         c.page_title = "integer";
-        c.i="12";
+        std::ostringstream tmp;tmp<<id;//int>>string
+        c.i=tmp.str();
         c.page_content = "<p>content</p>";
         render("integer",c);
     }//integer
