@@ -20,6 +20,9 @@ public:
         dispatcher().assign("/page",&myapp::page,this);
         mapper().assign("page","/page");
 
+        dispatcher().assign("/integer",&myapp::integer,this);
+        mapper().assign("integer","/integer");
+
         mapper().root("/myapp");
     }//constructor
     void ini(content::master &c)
@@ -41,6 +44,17 @@ public:
         c.page_content = "<p>A page about this web site</p>";
         render("page",c);
     }//page
+    void integer()
+    {
+const int id=12;
+        content::integer c;
+        ini(c);
+        std::cout<<__FILE__<<"/"<<__func__<<std::endl;
+        c.page_title = "integer";
+        c.i=id;
+        c.page_content = "<p>content</p>";
+        render("page",c);
+    }//integer
     void news()
     {
         content::news c;

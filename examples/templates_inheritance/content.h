@@ -11,12 +11,13 @@ namespace content  {
     struct page : public master {
         std::string page_title, page_content;
     };
+    struct integer : public page {
+        int i;
+    };
     struct news : public master {
         std::list<std::string> news_list;
     };
-}
+}//content
 
-
-#endif
+#endif //CONTENT_H
 // vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4
-
